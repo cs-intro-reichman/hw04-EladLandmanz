@@ -22,7 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-       
+       System.out.println(capVowelsLowRest("One two tHRee world"));
     }
 
     public static String capVowelsLowRest (String string) {
@@ -50,8 +50,10 @@ public class StringOps {
                         default:
                             retString += (char)string.charAt(i);                      
                     }
-                } else {
+                } else if (string.charAt(i) != 'A' && string.charAt(i) != 'E' && string.charAt(i) != 'I' && string.charAt(i) != 'O' && string.charAt(i) != 'U' ) {
                     retString += ((char)(string.charAt(i) + 32));
+                }else{
+                    retString += (char)(string.charAt(i));  
                 }
                 
 

@@ -77,7 +77,7 @@ public class ArrayOps {
        
         }
         isSorted = (increasing || decreasing);
-        System.out.println(isSorted);
+        
         return isSorted;
     }
 
