@@ -28,6 +28,7 @@ public class StringOps {
     public static String capVowelsLowRest (String string) {
         // Write your code here:
         String retString = "";
+        // #feedback - this function is a bit long, consider extracting some code to helper functions in these cases.
         for (int i = 0; i < string.length(); i++){
             if (string.charAt(i) != 32){
                 if (string.charAt(i) >= 'a'){
@@ -68,6 +69,7 @@ public class StringOps {
         // Write your code here:
         String retString = "";
         int j = 0;
+        // #feedback - it is better in this case to write the actual char and not its string representation.
         while (j < string.length() && string.charAt(j) == 32 ){
             j++;
         }
@@ -83,6 +85,8 @@ public class StringOps {
         for (int i = j; i < string.length(); i++){
             if (string.charAt(i) != 32){
                     if (string.charAt(i - 1) != 32){
+                        // #feedback - please also check "<= 'z'" to be on the safe side and know that you are checking letters only.
+                        // Also, this code can be extracted to a helper function to check if the letter is lower case.
                         if (string.charAt(i) >= 'a'){
                             retString += (char)string.charAt(i);
                         }else{
@@ -107,6 +111,7 @@ public class StringOps {
         int chrAmount = 0;
         int j = 0;
         int[] chrIndx;
+        // #feedback - no need to create this instance of chrIndx, you only need the one defined below.
         chrIndx = new int[string.length()];
         for (int i = 0; i < string.length(); i++){
             if ( string.charAt(i) == chr){
